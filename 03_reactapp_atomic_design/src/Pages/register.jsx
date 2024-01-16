@@ -5,13 +5,8 @@ import { Link } from "react-router-dom";
 const PageRegister = () => {
 
     return (
-       <AuthLayouts title="Register">
+       <AuthLayouts title="Register" type="register">
             <FormRegister />
-            <p className="text-sm mt-3 text-center">Sudah Punya Akun ? {" "}
-                <Link to="/login" className="font-bold text-blue-600">
-                    Login
-                </Link>
-            </p>
        </AuthLayouts>
     )
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../Elements/Button';
 
 const CardProduct = (props) => {
@@ -12,11 +13,11 @@ const CardProduct = (props) => {
 }
 
 const Header = (props) => {
-    const {Image} = props;
+    const {Image, id} = props;
     return (
-        <a href="">
+        <Link to={`/product/detail/${id}`}>
             <img src={Image} alt="product" className="p-8 rounded-t-lg h-60 w-full object-cover" />
-        </a>
+        </Link>
     );
 }
 

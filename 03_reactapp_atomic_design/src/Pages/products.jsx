@@ -58,7 +58,7 @@ const Products = () => {
                 <div className='w-4/6 flex flex-wrap'>
                     {products.length > 0 && products.map((product) => (
                         <CardProduct key={product.id}>
-                            <CardProduct.Header Image={product.image}></CardProduct.Header>
+                            <CardProduct.Header Image={product.image} id={product.id}></CardProduct.Header>
                             <CardProduct.Body title={product.title}>
                                 {product.description}
                             </CardProduct.Body>

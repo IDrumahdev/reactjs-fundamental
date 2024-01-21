@@ -10,6 +10,7 @@ import ProfilePage from './Pages/profile.jsx';
 import DetailProductPage from './Pages/DetailProductPage.jsx';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import DarkModeProvider from './context/DarkMode.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router}/>
+      <DarkModeProvider>
+        <RouterProvider router={router}/>
+      </DarkModeProvider>
     </Provider>
   </React.StrictMode>,
 )
